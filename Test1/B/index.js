@@ -4,19 +4,19 @@ const submitButton = document.getElementById('submit');
 
 const myQuestions = [{"category":"Sports","type":"multiple","difficulty":"easy",
                     question:"In golf, what name is given to a hole score of two under par?",
-                    correct_answer:"Eagle",answers:["Birdie","Bogey",,"Albatross"]},
+                    correct_answer:"3",answers:["Birdie","Bogey","Albatross","Eagle"]},
                     {"category":"Sports","type":"multiple","difficulty":"easy",
                     question:"Which team won 2014 FIFA World Cup in Brazil?",
-                    correct_answer:"Germany",answers:["Argentina","Brazil","Netherlands",]},
+                    correct_answer:`3`,answers:["Argentina","Brazil","Netherlands","Germany"]},
                     {"category":"Sports","type":"multiple","difficulty":"easy",
                     question:"In Baseball, how many times does the ball have to be pitched outside of the strike zone before the batter is walked?",
-                    correct_answer:`4`,answers:["1","2","3"]},
+                    correct_answer:`3`,answers:["1","2","3","4"]},
                     {"category":"Sports","type":"multiple","difficulty":"easy",
                     question:"Who is often called &quot;the Maestro&quot; in the men&#039;s tennis circuit?",
-                    correct_answer:"Roger Federer",answers:["Bill Tilden","Boris Becker","Pete Sampras",]},
+                    correct_answer:"3",answers:["Bill Tilden","Boris Becker","Pete Sampras","Roger Federer"]},
                     {"category":"Sports","type":"multiple","difficulty":"easy",
                     question:"Who won the UEFA Champions League in 2016?",
-                    correct_answer:"Real Madrid C.F.",answers:["FC Bayern Munich","Atletico Madrid","Manchester City F.C.",]}]
+                    correct_answer:"3",answers:["FC Bayern Munich","Atletico Madrid","Manchester City F.C.","Real Madrid C.F."]}]
 
 function buildQuiz() {
     const output = [];
@@ -41,8 +41,7 @@ function buildQuiz() {
             `<div class="question"> ${currentQuestion.question} </div>
                 <div class="answers"> 
                 ${answers.join('')}
-                <input type="radio" name="question${questionNumber}" value="${letter}">
-                ${currentQuestion.correct_answer}</div>
+                </div>
                 `
           );
         //console.log(output);
